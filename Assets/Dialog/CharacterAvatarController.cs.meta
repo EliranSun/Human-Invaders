@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1f91c3d77cabd427d8c3053933f0e96d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - royRooster: {fileID: 21300000, guid: d5d6ad637e8ae477cb28a6bd87001a00, type: 3}
+  - jazz: {fileID: 21300000, guid: 08f95a544bd5e479b8a723b9667ec23d, type: 3}
+  - ryan: {fileID: 21300000, guid: 6299d713940454703ae384f74e1bf3f4, type: 3}
+  - Chickoboros: {fileID: 21300000, guid: 346e9191a5a6d4567a617860c40b78db, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
