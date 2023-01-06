@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
+using UnityEngine.UI;
 
 public class CharacterAvatarController : MonoBehaviour
 {
@@ -25,7 +27,10 @@ public class CharacterAvatarController : MonoBehaviour
 
     void Update() { }
 
-    [ContextMenu("Change Avatar")]
-    [YarnCommand("avatar")]
-    public void ChangeAvatar() { }
+    [YarnCommand("changeAvatar")]
+    public void ChangeAvatar() {
+        // Change Image on GameObject "CharacterDialogueAvatar" to the sprite royRooster
+        GameObject
+            .Find("CharacterDialogueAvatar").GetComponent<Image>().sprite = royRooster;
+    }
 }

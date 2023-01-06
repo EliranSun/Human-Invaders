@@ -1,8 +1,8 @@
 ﻿title: Start
-position: -173,8
+position: -301,-437
 ---
-<<avatar Roy>>
 Roy: Come on kids, lo and behold, a telescope!
+<<jump Test>>
 Rufus: Ohh, a telescope!
 Dottie: Why is it so big?
 Roy: It's a special telescope. You uncle Doodle built it.
@@ -24,6 +24,14 @@ Roy: Uhh,
 -> Player: Settle this with a coin toss!
   <<jump CoinToss>>
 ===
+title: Test
+position: -305,-71
+---
+Mmm, I wonder if this works.
+<<changeAvatar CharacterDialogueAvatar>>
+Aha?
+<<jump ChoseDottie>>
+===
 title: ChoseDottie
 position: 38,-59
 ---
@@ -34,7 +42,7 @@ Rufud: It's like... ugh.
 Dottie: Oh, I see.
 ===
 title: ChoseRufus
-position: 35,31
+position: -63,-513
 ---
 Dottie: Ooh, but :(
 Roy: Alright, alright, you can go first.
@@ -42,7 +50,7 @@ Dottie: Yay!
 Roy: Such a good brother.
 ===
 title: CoinToss
-position: 38,130
+position: 77,-322
 ---
 Roy: Alright, let's settle this with a coin toss.
 Roy: Heads or tails?
