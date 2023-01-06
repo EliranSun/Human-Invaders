@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{77aaa947-a203-448c-9ab2-83220ad13a73}">
+		<property name="note" />
+		<property name="assetPath">
+			<value>Full Confession.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>245.48136054421769</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{467bce2d-9a9a-47fd-93c5-415f63b9616f}</destination>
+		</relationship>
+	</object>
+</objects>

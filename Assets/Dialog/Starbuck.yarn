@@ -1,0 +1,61 @@
+﻿title: Start
+position: -173,8
+---
+Roy: Come on kids, lo and behold, a telescope!
+Rufus: Ohh, a telescope!
+Dottie: Why is it so big?
+Roy: It's a special telescope. You uncle Doodle built it.
+Dottie: Why's it so special?
+Roy: It's the most powerful telescope in the world! Or so he say.
+Roy: Here, let me show you. Do you see our moon, Self, in the sky?
+Rufus: Yeah, it's so big!
+Dottie: It's so bright!
+Roy: That's right. With this telescope, we will even see the moon's surface, and the Roosters living there.
+Rufus: What!
+Dottie: What!
+Dottie: I want to see!
+Rufus: No, let me see!
+Roy: Uhh,
+-> Player: Dottie should go first, she's your younger sister!
+  <<jump ChoseDottie>>
+-> Player: Rufus should go first, he's your older brother!
+  <<jump ChoseRufus>>
+-> Player: Settle this with a coin toss!
+  <<jump CoinToss>>
+===
+title: ChoseDottie
+position: 38,-59
+---
+Dottie: Yay!
+Rufus: Blergh.
+Dottie: What's Blergh?
+Rufud: It's like... ugh.
+Dottie: Oh, I see.
+===
+title: ChoseRufus
+position: 35,31
+---
+Dottie: Ooh, but :(
+Roy: Alright, alright, you can go first.
+Dottie: Yay!
+Roy: Such a good brother.
+===
+title: CoinToss
+position: 38,130
+---
+Roy: Alright, let's settle this with a coin toss.
+Roy: Heads or tails?
+Dottie: Heads!
+Rufus: Tails!
+Roy: Alright, let's see.
+
+<<if CoinToss() == "Heads" >> // 50% chance
+    Roy: And the coin is heads!
+    Dottie: Yay!
+    Rufus: Blergh.
+<<else>>
+    Roy: And the coin is tails!
+    Dottie: Ooh, but :(
+    Rufus: Alright!
+<<endif>>
+===
