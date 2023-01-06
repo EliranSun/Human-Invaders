@@ -23,7 +23,6 @@ public class Randomizer : MonoBehaviour
     {
         return Random.Range(0, 1); // return a random number between 0 and 99 (will never return 100)
     }
-
     public string CoinToss()
     {
         // Random.Range() returns a value between 0 and 1.

@@ -1,11 +1,10 @@
 ﻿title: Start
 position: -301,-437
 ---
-Roy: Come on kids, lo and behold, a telescope!
-<<jump Test>>
-Rufus: Ohh, a telescope!
+Roy: There you go kids! a Dobsonian telescope!
+Rufus: Ohh!
 Dottie: Why is it so big?
-Roy: It's a special telescope. You uncle Doodle built it.
+Roy: It's a special telescope. Your uncle Doodle built it.
 Dottie: Why's it so special?
 Roy: It's the most powerful telescope in the world! Or so he say.
 Roy: Here, let me show you. Do you see our moon, Self, in the sky?
@@ -24,21 +23,13 @@ Roy: Uhh,
 -> Player: Settle this with a coin toss!
   <<jump CoinToss>>
 ===
-title: Test
-position: -305,-71
----
-Mmm, I wonder if this works.
-<<changeAvatar CharacterDialogueAvatar>>
-Aha?
-<<jump ChoseDottie>>
-===
 title: ChoseDottie
-position: 38,-59
+position: 39,-59
 ---
 Dottie: Yay!
 Rufus: Blergh.
 Dottie: What's Blergh?
-Rufud: It's like... ugh.
+Rufus: It's like... ugh.
 Dottie: Oh, I see.
 ===
 title: ChoseRufus
