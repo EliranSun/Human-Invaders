@@ -5,7 +5,7 @@ using Yarn.Unity;
 using UnityEngine.UI;
 using TMPro;
 
-public class CharacterAvatarController : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     public enum Characters
     {

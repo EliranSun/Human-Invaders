@@ -36,7 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Dialog\CharacterAvatarController.cs" />
+     <Compile Include="Assets\Dialog\CharacterController.cs" />
      <Compile Include="Assets\Scripts\Shared Scripts\CharacterEnum.cs" />
      <Compile Include="Assets\Scripts\Level One Scripts\Egg.cs" />
      <Compile Include="Assets\Scripts\Scene One Scripts\TelescopeController.cs" />

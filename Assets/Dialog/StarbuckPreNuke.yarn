@@ -1,6 +1,8 @@
 ﻿title: Start
-position: -301,-437
+tags: 
+position: -138.96852111816406,-698.68505859375
 ---
+Roy: OK kids, It's ready!
 Roy: There you go kids! a Dobsonian telescope!
 Rufus: Ohh!
 Dottie: Why is it so big?
@@ -24,7 +26,8 @@ Roy: Uhh,
   <<jump CoinToss>>
 ===
 title: ChoseDottie
-position: 39,-59
+tags: 
+position: 74.00000047683716,-436.0000305175781
 ---
 Dottie: Yay!
 Rufus: Blergh.
@@ -33,7 +36,8 @@ Rufus: It's like... ugh.
 Dottie: Oh, I see.
 ===
 title: ChoseRufus
-position: -63,-513
+tags: 
+position: -348.55590057373047,-449.7794189453125
 ---
 Dottie: Ooh, but :(
 Roy: Alright, alright, you can go first.
@@ -41,7 +45,8 @@ Dottie: Yay!
 Roy: Such a good brother.
 ===
 title: CoinToss
-position: 77,-322
+tags: 
+position: -129.4756088256836,-395.9339294433594
 ---
 Roy: Alright, let's settle this with a coin toss.
 Roy: Heads or tails?
