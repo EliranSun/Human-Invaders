@@ -4,29 +4,43 @@ using UnityEngine;
 
 public class ChildrenController : MonoBehaviour
 {
-    Rigidbody2D characterRigidbody2D;
-    Transform characterTransform;
-    public float xSwitch;
-    public float xForce = 0.3f;
-    public float yForce = 1.6f;
-    public float jumpEvery = 0.8f;
-    public int restEvery = 3;
+    public GameObject[] characters;
+    Dictionary<string, float>[] characterProps = new Dictionary<string, float>[2] {
+        new Dictionary<string, float>(),
+        new Dictionary<string, float>()
+    };
 
     void Start()
     {
-        xSwitch = Random.Range(-3, 1);
-        characterRigidbody2D = GetComponent<Rigidbody2D>();
-        characterTransform = GetComponent<Transform>();
+        for (int i = 0; i < characters.Length; i++)
+        {
+            characterProps[i].Add("xSwitch", Random.Range(-3, 1));
+            characterProps[i].Add("xForce", Random.Range(0.3f, 0.5f));
+            characterProps[i].Add("yForce", Random.Range(1.9f, 2.2f));
+            characterProps[i].Add("jumpEvery", Random.Range(1f, 1.2f));
+            characterProps[i].Add("restEvery", Random.Range(2, 5));
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Walk(characterTransform);
+        for(int i = 0; i < characters.Length; i++)
+        {
+            Walk(characters[i], i);
+        }
     }
 
-    void Walk(Transform characterTransform) {
-        FlipAvatar();
+    void Walk(GameObject character, int index) {
+        Transform characterTransform = character.transform;
+        Rigidbody2D characterRigidBody = character.GetComponent<Rigidbody2D>();
+        float xSwitch = characterProps[index]["xSwitch"];
+        float xForce = characterProps[index]["xForce"];
+        float yForce = characterProps[index]["yForce"];
+        float jumpEvery = characterProps[index]["jumpEvery"];
+        int restEvery = (int)characterProps[index]["restEvery"];
+        
+        FlipAvatar(characterTransform, restEvery);
 
         // walk randomaly left/right and switch direction
         if (
@@ -38,15 +52,15 @@ public class ChildrenController : MonoBehaviour
         }
         
         // Add a small vertical force, as if the character was jumping
+        print($"jumping {character.gameObject.name} {Time.time}, {Time.time % jumpEvery}");
         if (Time.time % jumpEvery < 0.1f) {
-            characterRigidbody2D.AddForce(new Vector2(xForce, yForce));
+            characterRigidBody.AddForce(new Vector2(xForce, yForce));
         }
     }
 
-    void FlipAvatar() {
+    void FlipAvatar(Transform characterTransform, float restEvery) {
         if (Time.time % restEvery < 2f) {
             restEvery = Random.Range(2, 5);
-            print($"resting {Time.time}, {Time.time % restEvery}");
             if (characterTransform.localScale.x > 0) {
                 characterTransform.localScale = new Vector3(
                     -characterTransform.localScale.x,
