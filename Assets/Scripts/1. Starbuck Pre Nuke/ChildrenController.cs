@@ -52,7 +52,6 @@ public class ChildrenController : MonoBehaviour
         }
         
         // Add a small vertical force, as if the character was jumping
-        print($"jumping {character.gameObject.name} {Time.time}, {Time.time % jumpEvery}");
         if (Time.time % jumpEvery < 0.1f) {
             characterRigidBody.AddForce(new Vector2(xForce, yForce));
         }

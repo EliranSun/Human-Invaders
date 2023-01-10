@@ -7,6 +7,7 @@ using TMPro;
 
 public class CharacterController : MonoBehaviour
 {
+    DialogueRunner dialogue;
     public enum Characters
     {
         None,
@@ -23,9 +24,12 @@ public class CharacterController : MonoBehaviour
     public Sprite royRooster;
     public Sprite jazz;
     public Sprite ryan;
-    public Sprite Chickoboros;
+    public Sprite chickoboros;
+    public Sprite rufus;
+    public Sprite dottie;
 
     void Start() { 
+        dialogue = FindObjectOfType<DialogueRunner>();
     }
 
     void Update() { 
@@ -33,52 +37,62 @@ public class CharacterController : MonoBehaviour
     }
 
     public void ChangeAvatar() {
+        GameObject characterDialogueAvatar = GameObject.Find("CharacterDialogueAvatar");
+        
+        if (!characterDialogueAvatar) {
+            return;
+        }
+
+        Image characterDialogueAvatarImage = characterDialogueAvatar.GetComponent<Image>();
+
+        if (dialogue.IsDialogueRunning == false) {
+            characterDialogueAvatarImage.sprite = null;
+            characterDialogueAvatar.SetActive(false);
+            return;
+        }
+
+        Characters characterName;
         TextMeshProUGUI characterNameTextMeshPro = GameObject
             .Find("Character Name")
             .GetComponent<TextMeshProUGUI>();
 
         // convert string to enum
-        Characters characterName;
         if (System.Enum.TryParse<Characters>(characterNameTextMeshPro.text, out characterName)) {
-            // do something with characterName
+            // array or something iteratable
+            switch (characterName) {
+                case Characters.Roy:
+                    characterDialogueAvatarImage.sprite = royRooster;
+                    break;
+
+                case Characters.Jazz:
+                    characterDialogueAvatarImage.sprite = jazz;
+                    break;
+                    
+                case Characters.Ryan:
+                    characterDialogueAvatarImage.sprite = ryan;
+                    break;
+
+                case Characters.Chickoboros:
+                    characterDialogueAvatarImage.sprite = chickoboros;
+                    break;
+
+                case Characters.Dottie:
+                    characterDialogueAvatarImage.sprite = dottie;
+                    break;
+                        
+                case Characters.Rufus:
+                    characterDialogueAvatarImage.sprite = rufus;
+                    break;
+
+                case Characters.None:
+                default:
+                    print($"No avatar found for {characterName}");
+                    characterDialogueAvatarImage.sprite = null;
+                    characterDialogueAvatar.SetActive(false);
+                    break;
+            }
         } else {
             print($"Can't parse character name: {characterNameTextMeshPro.text}");
-        }
-
-        switch (characterName) {
-            case Characters.Roy:
-                GameObject
-                    .Find("CharacterDialogueAvatar")
-                    .GetComponent<Image>().sprite = royRooster;
-                break;
-
-            case Characters.Dottie:
-            case Characters.Jazz:
-                GameObject
-                    .Find("CharacterDialogueAvatar")
-                    .GetComponent<Image>().sprite = jazz;
-                break;
-                
-            case Characters.Rufus:
-            case Characters.Ryan:
-                GameObject
-                    .Find("CharacterDialogueAvatar")
-                    .GetComponent<Image>().sprite = ryan;
-                break;
-
-            case Characters.Chickoboros:
-                GameObject
-                    .Find("CharacterDialogueAvatar")
-                    .GetComponent<Image>().sprite = Chickoboros;
-                break;
-
-            case Characters.None:
-            default:
-                print($"No avatar found for {characterName}");
-                GameObject
-                    .Find("CharacterDialogueAvatar")
-                    .GetComponent<Image>().sprite = null;
-                break;
         }
     }
 }

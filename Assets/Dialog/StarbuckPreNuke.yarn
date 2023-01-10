@@ -1,14 +1,14 @@
 ﻿title: Start
 tags: 
-position: -138.96852111816406,-698.68505859375
+position: -354.968505859375,-705.68505859375
 ---
 Roy: OK kids, It's ready!
-Roy: There you go kids! a Dobsonian telescope!
 Rufus: Ohh!
-Dottie: Why is it so big?
-Roy: It's a special telescope. Your uncle Doodle built it.
-Dottie: Why's it so special?
-Roy: It's the most powerful telescope in the world! Or so he say.
+Dottie: Alright!
+Roy: Now, you two have to be very careful. This telescope is very powerful.
+Dottie: Why's it so powerful?
+Roy: Because your uncle Doodle built it, with it - we'll be able to further and further into our solar system!
+Dottie: Ohh...
 Roy: Here, let me show you. Do you see our moon, Self, in the sky?
 Rufus: Yeah, it's so big!
 Dottie: It's so bright!
@@ -24,6 +24,7 @@ Roy: Uhh,
   <<jump ChoseRufus>>
 -> Player: Settle this with a coin toss!
   <<jump CoinToss>>
+
 ===
 title: ChoseDottie
 tags: 
@@ -33,14 +34,14 @@ Dottie: Yay!
 Rufus: Blergh.
 Dottie: What's Blergh?
 Rufus: It's like... ugh.
-Dottie: Oh, I see.
+Dottie: Oh... Blergh!
 ===
 title: ChoseRufus
 tags: 
 position: -348.55590057373047,-449.7794189453125
 ---
 Dottie: Ooh, but :(
-Roy: Alright, alright, you can go first.
+Rufus: Uhh, you can go first I guess.
 Dottie: Yay!
 Roy: Such a good brother.
 ===
@@ -64,3 +65,4 @@ Roy: Alright, let's see.
     Rufus: Alright!
 <<endif>>
 ===
+
