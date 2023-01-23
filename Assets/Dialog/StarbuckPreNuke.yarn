@@ -1,8 +1,12 @@
-﻿title: Start
-tags: 
+﻿
+title: Start
+tags:
 position: -354.968505859375,-705.68505859375
 ---
+<<declare $telescopeControlledBy = "" as string>>
 Roy: OK kids, It's ready!
+<<set $telescopeControlledBy to "Dottie">>
+
 Rufus: Ohh!
 Dottie: Alright!
 Roy: Now, you two have to be very careful. This telescope is very powerful.
@@ -24,12 +28,13 @@ Roy: Uhh,
   <<jump ChoseRufus>>
 -> Player: Settle this with a coin toss!
   <<jump CoinToss>>
-
 ===
 title: ChoseDottie
-tags: 
+tags:
 position: 74.00000047683716,-436.0000305175781
 ---
+<<set $telescopeControlledBy to "Dottie">>
+Roy: Alright, {$telescopeControlledBy}!
 Dottie: Yay!
 Rufus: Blergh.
 Dottie: What's Blergh?
@@ -37,16 +42,17 @@ Rufus: It's like... ugh.
 Dottie: Oh... Blergh!
 ===
 title: ChoseRufus
-tags: 
+tags:
 position: -348.55590057373047,-449.7794189453125
 ---
+<<set $telescopeControlledBy to "Dottie">>
 Dottie: Ooh, but :(
 Rufus: Uhh, you can go first I guess.
 Dottie: Yay!
 Roy: Such a good brother.
 ===
 title: CoinToss
-tags: 
+tags:
 position: -129.4756088256836,-395.9339294433594
 ---
 Roy: Alright, let's settle this with a coin toss.
@@ -56,10 +62,12 @@ Rufus: Tails!
 Roy: Alright, let's see.
 
 <<if CoinToss() == "Heads" >> // 50% chance
+    <<set $telescopeControlledBy to "Rufus">>
     Roy: And the coin is heads!
     Dottie: Yay!
     Rufus: Blergh.
 <<else>>
+    <<set $telescopeControlledBy to "Dottie">>
     Roy: And the coin is tails!
     Dottie: Ooh, but :(
     Rufus: Alright!

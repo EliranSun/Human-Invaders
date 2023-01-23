@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Randomizer : MonoBehaviour
 {
+    public static string coinTossResult;
+
     void Start()
     {
         GetComponent<Yarn.Unity.DialogueRunner>()
@@ -23,6 +25,7 @@ public class Randomizer : MonoBehaviour
     {
         return Random.Range(0, 1); // return a random number between 0 and 99 (will never return 100)
     }
+
     public string CoinToss()
     {
         // Random.Range() returns a value between 0 and 1.
@@ -30,10 +33,12 @@ public class Randomizer : MonoBehaviour
         // We use the value returned by Random.Range() to determine Heads or Tails.
         if (Random.Range(0, 2) == 0)
         {
+            coinTossResult = "Heads";
             return "Heads";
         }
         else
         {
+            coinTossResult = "Tails";
             return "Tails";
         }
     }
