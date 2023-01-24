@@ -73,4 +73,20 @@ Roy: Alright, let's see.
     Rufus: Alright!
 <<endif>>
 ===
-
+title: TelescopeGazing
+tags:
+position: -354.968505859375,-705.68505859375
+---
+<<if $telescopeControlledBy == "Dottie">>
+    Roy: OK Dottie, listen carefully, this is an expensive telescope!
+    Dottie: I know dad!
+    Roy: Now, you see that black handle?
+    Dottie: Yeah!
+    Roy: You have to turn it left and right using the arrow keys. Up and down to turn it up, or down!
+    Dottie: OK!
+<<else>>
+    Roy: OK Rufus, you see that black handle?
+    Rufus: Yep
+    Roy: You have to turn it left and right using the arrow keys. Up and down to turn it up, or down!
+<<endif>>
+===
