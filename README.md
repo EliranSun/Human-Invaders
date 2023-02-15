@@ -1,2 +1,2 @@
 # Human-Invaders
- A game about Man & Roosters
+ A game about Men & Roosters
